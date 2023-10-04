@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #000; /* Set the background color to black */
+            color: #fff;
             margin: 0;
             padding: 0;
         }
