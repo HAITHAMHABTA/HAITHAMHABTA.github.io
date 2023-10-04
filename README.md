@@ -29,7 +29,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #000; /* Set the background color of the content box to black */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .subscribe-button {
