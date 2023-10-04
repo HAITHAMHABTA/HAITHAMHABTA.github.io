@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haitham's Minecraft Channel</title>
+    <title>Haitham's Minecraft Channel////This website is under construction not allcapabilities are available for now....</title>
     <style>
         body {
             font-family: Arial, sans-serif;
