@@ -79,7 +79,7 @@
 
         <!-- Add the second MP3 audio file that loops -->
         <audio id="audioPlayer2" controls loop autoplay>
-            <source src=".mp3" type="audio/mpeg">
+            <source src="Maher Zain - Mawlaya (Arabic) | ماهر زين - مولاي | Official Lyric Video.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         
