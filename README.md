@@ -83,12 +83,16 @@
             const playButton1 = document.getElementById('playButton1');
 
             playButton1.addEventListener('click', () => {
-                audio1.play().catch(error => {
-                    // Autoplay was prevented, handle the error here (e.g., show a message)
-                    console.error(error);
-                });
+                if (audio1.paused) {
+                    audio1.play();
+                    playButton1.textContent = 'Pause';
+                } else {
+                    audio1.pause();
+                    playButton1.textContent = 'Play';
+                }
             });
         </script>
     </div>
 </body>
 </html>
+
