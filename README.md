@@ -7,7 +7,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #000; /* Set the background color to black */
-            color: #fff;
+            color: #fff; /* Set text color to white */
             margin: 0;
             padding: 0;
         }
