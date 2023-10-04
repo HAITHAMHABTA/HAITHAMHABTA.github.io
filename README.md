@@ -89,6 +89,27 @@
                 } else {
                     audio1.pause();
                     playButton1.textContent = 'Play';
+                        <!-- Add the first MP3 audio file that loops -->
+        <audio id="audioPlayer1" controls loop>
+            <source src="Maher Zain | ماهر زين - يا نبي سلام عليك | Official Music Video.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Play Button for the first audio -->
+        <button id="playButton1">Play</button>
+
+        <!-- JavaScript to play audio when the button is clicked -->
+        <script>
+            const audio1 = document.getElementById('audioPlayer1');
+            const playButton1 = document.getElementById('playButton1');
+
+            playButton1.addEventListener('click', () => {
+                if (audio1.paused) {
+                    audio1.play();
+                    playButton1.textContent = 'Pause';
+                } else {
+                    audio1.pause();
+                    playButton1.textContent = 'Play';
                 }
             });
         </script>
