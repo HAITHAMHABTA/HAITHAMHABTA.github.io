@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -80,7 +79,7 @@
 
         <!-- Add the second MP3 audio file that loops -->
         <audio id="audioPlayer2" controls loop>
-            <source src="Maher Zain - Ya Nabi Salam Alayka (Arabic) | ماهر زين - يا نبي سلام عليك | Official Music Video.mp3" type="audio/mpeg">
+            <source src="your-second-audio-file.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         
@@ -113,6 +112,14 @@
                     playPauseButton2.textContent = 'Play';
                 }
             }
+
+            // Play the audios when the page loads
+            document.addEventListener("DOMContentLoaded", function() {
+                const audio1 = document.getElementById('audioPlayer1');
+                const audio2 = document.getElementById('audioPlayer2');
+                audio1.play();
+                audio2.play();
+            });
 
             // Add click event listeners to the buttons
             document.getElementById('playPauseButton1').addEventListener('click', toggleAudio1);
