@@ -69,10 +69,32 @@
         <a href="https://www.youtube.com/channel/UC4O7uCsdpSucq3rAmtgJj9g" class="subscribe-button" target="_blank">Subscribe Now</a>
         
         <!-- Add an MP3 audio file that loops -->
-        <audio controls loop>
+        <audio id="audioPlayer" controls loop>
             <source src="Maher Zain - Mawlaya | Official Lyric Video | ماهر زين - مولاي.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+        
+        <!-- Play/Pause Button -->
+        <button id="playPauseButton">Play/Pause</button>
+
+        <script>
+            const audio = document.getElementById('audioPlayer');
+            const playPauseButton = document.getElementById('playPauseButton');
+
+            // Function to play or pause audio
+            function toggleAudio() {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseButton.textContent = 'Pause';
+                } else {
+                    audio.pause();
+                    playPauseButton.textContent = 'Play';
+                }
+            }
+
+            // Add click event listener to the button
+            playPauseButton.addEventListener('click', toggleAudio);
+        </script>
     </div>
 </body>
 </html>
