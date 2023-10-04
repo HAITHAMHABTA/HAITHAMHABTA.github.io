@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -78,31 +77,17 @@
         <!-- Play Button for the first audio -->
         <button id="playButton1">Play</button>
 
-        <!-- Add the second MP3 audio file that loops -->
-        <audio id="audioPlayer2" controls loop>
-            <source src="Maher_Zain_Mawlaya_Arabic_Official_Lyric_Video.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        
-        <!-- Play Button for the second audio -->
-        <button id="playButton2">Play</button>
-
+        <!-- JavaScript to play audio when the button is clicked -->
         <script>
-            // Function to play audio for the first audio
-            function playAudio1() {
-                const audio1 = document.getElementById('audioPlayer1');
-                audio1.play();
-            }
+            const audio1 = document.getElementById('audioPlayer1');
+            const playButton1 = document.getElementById('playButton1');
 
-            // Function to play audio for the second audio
-            function playAudio2() {
-                const audio2 = document.getElementById('audioPlayer2');
-                audio2.play();
-            }
-
-            // Add click event listeners to the play buttons
-            document.getElementById('playButton1').addEventListener('click', playAudio1);
-            document.getElementById('playButton2').addEventListener('click', playAudio2);
+            playButton1.addEventListener('click', () => {
+                audio1.play().catch(error => {
+                    // Autoplay was prevented, handle the error here (e.g., show a message)
+                    console.error(error);
+                });
+            });
         </script>
     </div>
 </body>
