@@ -69,22 +69,22 @@
         <a href="https://www.youtube.com/channel/UC4O7uCsdpSucq3rAmtgJj9g" class="subscribe-button" target="_blank">Subscribe Now</a>
         
         <!-- Add the first MP3 audio file that loops -->
-        <audio id="audioPlayer1" controls loop>
+        <audio id="audioPlayer1" controls loop autoplay>
             <source src="Maher Zain - Mawlaya | Official Lyric Video | ماهر زين - مولاي.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         
         <!-- Play/Pause Button for the first audio -->
-        <button id="playPauseButton1">Play/Pause</button>
+        <button id="playPauseButton1">Pause</button>
 
         <!-- Add the second MP3 audio file that loops -->
-        <audio id="audioPlayer2" controls loop>
-            <source src="your-second-audio-file.mp3" type="audio/mpeg">
+        <audio id="audioPlayer2" controls loop autoplay>
+            <source src=".mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         
         <!-- Play/Pause Button for the second audio -->
-        <button id="playPauseButton2">Play/Pause</button>
+        <button id="playPauseButton2">Pause</button>
 
         <script>
             // Function to play or pause audio for the first audio
@@ -112,14 +112,6 @@
                     playPauseButton2.textContent = 'Play';
                 }
             }
-
-            // Play the audios when the page loads
-            document.addEventListener("DOMContentLoaded", function() {
-                const audio1 = document.getElementById('audioPlayer1');
-                const audio2 = document.getElementById('audioPlayer2');
-                audio1.play();
-                audio2.play();
-            });
 
             // Add click event listeners to the buttons
             document.getElementById('playPauseButton1').addEventListener('click', toggleAudio1);
