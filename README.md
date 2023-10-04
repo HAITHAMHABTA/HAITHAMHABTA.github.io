@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -68,32 +69,54 @@
 
         <a href="https://www.youtube.com/channel/UC4O7uCsdpSucq3rAmtgJj9g" class="subscribe-button" target="_blank">Subscribe Now</a>
         
-        <!-- Add an MP3 audio file that loops -->
-        <audio id="audioPlayer" controls loop>
+        <!-- Add the first MP3 audio file that loops -->
+        <audio id="audioPlayer1" controls loop>
             <source src="Maher Zain - Mawlaya | Official Lyric Video | ماهر زين - مولاي.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         
-        <!-- Play/Pause Button -->
-        <button id="playPauseButton">Play/Pause</button>
+        <!-- Play/Pause Button for the first audio -->
+        <button id="playPauseButton1">Play/Pause</button>
+
+        <!-- Add the second MP3 audio file that loops -->
+        <audio id="audioPlayer2" controls loop>
+            <source src="Maher Zain - Ya Nabi Salam Alayka (Arabic) | ماهر زين - يا نبي سلام عليك | Official Music Video.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Play/Pause Button for the second audio -->
+        <button id="playPauseButton2">Play/Pause</button>
 
         <script>
-            const audio = document.getElementById('audioPlayer');
-            const playPauseButton = document.getElementById('playPauseButton');
-
-            // Function to play or pause audio
-            function toggleAudio() {
-                if (audio.paused) {
-                    audio.play();
-                    playPauseButton.textContent = 'Pause';
+            // Function to play or pause audio for the first audio
+            function toggleAudio1() {
+                const audio1 = document.getElementById('audioPlayer1');
+                const playPauseButton1 = document.getElementById('playPauseButton1');
+                if (audio1.paused) {
+                    audio1.play();
+                    playPauseButton1.textContent = 'Pause';
                 } else {
-                    audio.pause();
-                    playPauseButton.textContent = 'Play';
+                    audio1.pause();
+                    playPauseButton1.textContent = 'Play';
                 }
             }
 
-            // Add click event listener to the button
-            playPauseButton.addEventListener('click', toggleAudio);
+            // Function to play or pause audio for the second audio
+            function toggleAudio2() {
+                const audio2 = document.getElementById('audioPlayer2');
+                const playPauseButton2 = document.getElementById('playPauseButton2');
+                if (audio2.paused) {
+                    audio2.play();
+                    playPauseButton2.textContent = 'Pause';
+                } else {
+                    audio2.pause();
+                    playPauseButton2.textContent = 'Play';
+                }
+            }
+
+            // Add click event listeners to the buttons
+            document.getElementById('playPauseButton1').addEventListener('click', toggleAudio1);
+            document.getElementById('playPauseButton2').addEventListener('click', toggleAudio2);
         </script>
     </div>
 </body>
